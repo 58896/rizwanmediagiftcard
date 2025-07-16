@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>🎁 Claim Your Free Gift Cards – Limited-Time!</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+      color: #111827;
+    }
+    .container {
+      max-width: 960px;
+      margin: auto;
+      padding: 20px;
+      background: #ffffff;
+    }
+    h1 {
+      text-align: center;
+      font-size: 28px;
+      color: #1f2937;
+      margin-bottom: 10px;
+    }
+    p {
+      text-align: center;
+      color: #374151;
+      margin-bottom: 20px;
+    }
+    .countdown {
+      font-size: 18px;
+      text-align: center;
+      font-weight: bold;
+      color: #b91c1c;
+      margin-bottom: 20px;
+    }
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: #fefefe;
+      border: 1px solid #e5e7eb;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+      text-align: center;
+      transition: transform 0.3s ease;
+      width: 210px;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      height: 120px;
+      object-fit: contain;
+      padding: 10px;
+    }
+    .card-title {
+      font-weight: 600;
+      font-size: 16px;
+      padding: 10px;
+    }
+    .cta-button {
+      display: inline-block;
+      margin: 10px auto 20px;
+      background: linear-gradient(to right, #06b6d4, #3b82f6);
+      color: white;
+      padding: 10px 16px;
+      border-radius: 8px;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .cta-button:hover {
+      background: #2563eb;
+    }
+    footer {
+      text-align: center;
+      font-size: 12px;
+      color: #6b7280;
+      margin-top: 30px;
+    }
+    @media (max-width: 500px) {
+      h1 {
+        font-size: 22px;
+      }
+      .card-title {
+        font-size: 14px;
+      }
+      .cta-button {
+        width: 90%;
+      }
+    }
+  </style>
+  <script>
+    function startCountdown() {
+      const end = new Date();
+      end.setHours(end.getHours() + 24);
+      const countdownElement = document.getElementById("countdown");
+
+      function updateCountdown() {
+        const now = new Date();
+        const diff = end - now;
+
+        if (diff <= 0) {
+          countdownElement.innerText = "Offer expired!";
+          return;
+        }
+
+        const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+        countdownElement.innerText = `⏳ Hurry! Offer ends in ${hours}h ${minutes}m ${seconds}s`;
+        setTimeout(updateCountdown, 1000);
+      }
+
+      updateCountdown();
+    }
+    window.onload = startCountdown;
+  </script>
+</head>
+<body>
+  <div class="container">
+    <h1>🎁 Claim Your Free Gift Cards Now!</h1>
+    <p>Get amazing rewards from top U.S. brands – Limited quantities available!</p>
+    <div id="countdown" class="countdown"></div>
+
+    <div class="cards" >
+      <div class="card">
+        <img src="https://www.citypng.com/public/uploads/preview/hd-mcdonalds-restaurant-official-logo-png-image-701751694789841ejbiuxh7qn.png" alt="McDonald's">
+        <div class="card-title">McDonald's $25 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://yt3.googleusercontent.com/zb-CeccQq1pm8B_zvan3SZ5LGJ1EATwU6EeLye35F8wjG3nClyIzhNPA53xoUjGA4BEk6mYLmRg=s900-c-k-c0x00ffffff-no-rj" alt="Home Depot">
+        <div class="card-title">Home Depot Gift Card – Up to $100</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://upload.wikimedia.org/wikipedia/sco/thumb/b/bf/KFC_logo.svg/1200px-KFC_logo.svg.png" alt="KFC">
+        <div class="card-title">Free KFC Meal Gift Card – Up to $500</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQQ9nwqRBcZx5i9hWYo3rJieaGcbNdzB8QVPQ&s" alt="Firehouse Subs">
+        <div class="card-title">Firehouse Subs $150 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://cdn.worldvectorlogo.com/logos/ben-and-jerrys-4.svg" alt="Ben & Jerry's">
+        <div class="card-title">Ben & Jerry’s  – Up to $100 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqRLmO9mOtOTh62DgcpeTIvURfXmn19txV4g&s" alt="Walmart">
+        <div class="card-title">Walmart $100 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSK2tzIhe5AXqQzd7eHBBHJJ8BSiB8JpgoqSw&s" alt="Adidas">
+        <div class="card-title">Adidas Shopping Voucher $100 Gift Card </div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://images-na.ssl-images-amazon.com/images/I/41c3EtOyh1L._SS400_.jpg" alt="Nike">
+        <div class="card-title">Nike $50 Gift Card $100 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://usa.visa.com/dam/VCOM/global/common-assets/cards/visa-prepaid-card-800x450.png" alt="Chase">
+        <div class="card-title">Chase Prepaid Visa Card $100 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <!-- General Gift Cards -->
+      <div class="card">
+        <img src="https://www.skygames.com.pk/wp-content/uploads/2024/03/apple-gift-card-25-usd-usa-digital-code.png" alt="Gift">
+        <div class="card-title">$100 General Shopping Card $100 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKliKROxnZfyidnvByqCxCcS41oMjh12dl2Q&s" alt="Gift">
+        <div class="card-title">Visa Prepaid General Card $100 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+
+      <div class="card">
+        <img src="https://www.shutterstock.com/image-vector/giveaway-sale-win-conceptual-advertising-260nw-2363028377.jpg" alt="Gift">
+        <div class="card-title">American Brands Super Card $100 Gift Card</div>
+        <a href="#" class="cta-button">Claim Now</a>
+      </div>
+    </div>
+
+    <footer>
+      This site contains affiliate links. Gift card availability and value may vary.
+    </footer>
+  </div>
+</body>
+</html>
